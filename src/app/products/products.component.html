@@ -1,0 +1,85 @@
+<div *ngIf="mobiles; else error" class="container mob-table">
+  <div class="headers">
+    <h2 class="table-title">MANAGE MOBILES</h2>
+    <button class="btn add" (click)="edit_mobile()">Add Mobile</button>
+  </div>
+  <table class="table">
+    <thead class="text-center">
+      <tr class="text-check">
+        <th>Mobile</th>
+        <th>Price(rs)</th>
+        <th>Ram</th>
+        <th>Storage</th>
+      </tr>
+    </thead>
+    <tbody class="text-center">
+      <tr class="text-check" *ngFor="let x of mobiles">
+        <td>{{ x.mobile }}</td>
+        <td>{{ x.price }}</td>
+        <td>{{ x.ram }}</td>
+        <td>{{ x.storage }}</td>
+        <td>
+          <button class="btn btn-primary" (click)="edit_mobile(x)">Edit</button>
+        </td>
+        <td>
+          <button class="btn btn-danger" (click)="delete_mobile(x.id)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<ng-template #error>
+  <h1>error</h1>
+</ng-template>
+
+<div class="wrapper-class" *ngIf="showstatus">
+  <div class="mobile-form">
+    <h2 class="text-center">{{ formHeader }}</h2>
+    <div class="group">
+      <label for="mobile">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="mobileName"
+        name="mname"
+        required
+      />
+    </div>
+    <div class="group">
+      <label for="price">price</label>
+      <input
+        type="number"
+        class="form-control"
+        [(ngModel)]="price"
+        name="mprice"
+        required
+      />
+    </div>
+    <div class="group">
+      <label for="ram">Ram</label>
+      <input
+        type="number"
+        class="form-control"
+        [(ngModel)]="ram"
+        name="mram"
+        required
+      />
+    </div>
+    <div class="group">
+      <label for="storage">storage</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="storage"
+        name="mstorage"
+        required
+      />
+    </div>
+    <div class="actions">
+      <button class="btn btn-primary" (click)="save()">Save</button>
+      <button class="btn btn-danger" (click)="cancel()">Cancel</button>
+    </div>
+  </div>
+</div>
