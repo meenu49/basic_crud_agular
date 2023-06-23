@@ -1,0 +1,39 @@
+{
+  "details": [
+    {
+      "id": 2,
+      "mobile": "realme 6 pro",
+      "price": 46000,
+      "ram": 4,
+      "storage": "128gb"
+    },
+    {
+      "mobile": "oppo v5 pro",
+      "price": 90000,
+      "ram": 8,
+      "storage": "256",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "mobile": "vivo z7 pro",
+      "price": 67555,
+      "ram": 8,
+      "storage": "128gb"
+    },
+    {
+      "id": 5,
+      "mobile": "apple",
+      "price": 150000,
+      "ram": 12,
+      "storage": "256gb"
+    },
+    {
+      "id": 6,
+      "mobile": "realme A50",
+      "price": 45000,
+      "ram": 12,
+      "storage": "128gb"
+    }
+  ]
+}
